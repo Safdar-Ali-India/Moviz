@@ -1,12 +1,13 @@
-import { useState } from 'react'
- import './App.css'
+import React, {useState, useEffect} from 'react';
+import {tmdbApi} from "./utils/api";
+const App = () => {
 
-function App() {
-  
+  const apiTesting = ()=>{
+console.log("Safdar");
+  }
+  console.log(apiTesting);
   return (
-    <>
-     <div className="name">SAFDAR</div>
-    </>
+    <div>App</div>
   )
 }
 
