@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react';
-import {tmdbApi} from "./utils/api";
+import {tmdbApi} from  "./utils/api";
 const App = () => {
+useEffect(()=>{
+  apiTesting();
 
+},[]);
   const apiTesting = ()=>{
-console.log("Safdar");
+ tmdbApi('/movie/popular').then((data) => console.log(data))
+// console.log("Safdar");
   }
-  console.log(apiTesting);
+  // console.log(apiTesting);
   return (
-    <div>App</div>
+    <div className='App'>App</div>
   )
 }
 
