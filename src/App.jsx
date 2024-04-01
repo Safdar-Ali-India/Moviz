@@ -4,7 +4,7 @@ import {tmdbApi} from  "./utils/api";
 import { useSelector, useDispatch } from 'react-redux'
 import { getApiConfiguration } from './store/homeSlice';
 import Home from './pages/home/Home';
-
+import SearchResult from './pages/searchResult/SearchResult';
 
 const App = () => {
 
@@ -29,6 +29,7 @@ useEffect(()=>{
     <BrowserRouter >
     <Routes>
 <Route path="/" element={<Home />} />
+<Route path="/search/:qeury" element={<SearchResult />} />
 
     </Routes>
 
